@@ -2,6 +2,10 @@
 출력 속도가 중요할 땐 **endl 쓰지 말 것**<br>
 #[ 출력 속도 비교](https://www.acmicpc.net/blog/view/57) #[ (혹시 모른) 하나의 string으로 만드는 방법](https://www.acmicpc.net/source/24809285)
 
+#### 10818
+출력 속도를 신경쓰지 않고 풀었음<br>
+어디까지 빨라질 수 있는지 궁금할 때 이 문제 #[ 맞은 사람](https://www.acmicpc.net/problem/status/10818/84/1)을 확인해보자
+
 #### 10952
 문제 조건을 제대로 안 읽고 깜빡함
 
