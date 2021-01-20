@@ -1,5 +1,6 @@
 // char을 입력 받으면 한 글자씩 입력 받을 수 있음을 깜빡했음
-#include <iostream>
+// https://blockdmask.tistory.com/78 참고함
+# include <iostream>
 using namespace std;
 
 int main() {
