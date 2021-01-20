@@ -1,6 +1,5 @@
 // substr 쓰는 방법(https://ldgeao99.tistory.com/224)도 있고 scanf 쓰는 방법도 있음 
 // 개인적으로는 scanf 쓰는 방법이 간단해 보임
-
 #include <iostream>
 using namespace std;
 
