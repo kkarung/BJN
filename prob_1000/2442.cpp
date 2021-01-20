@@ -1,3 +1,4 @@
+// 예제 출력을 드래그해보면 어디 공백이 필요한 지 알 수 있음!!
 #include <iostream>
 using namespace std;
 
