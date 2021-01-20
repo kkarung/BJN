@@ -1,3 +1,6 @@
+#### 2438
+**문자열 곱셈 연산 안 됨**(java가 아님!)
+
 #### 2741
 출력 속도가 중요할 땐 **endl 쓰지 말 것**<br>
 #[ 출력 속도 비교](https://www.acmicpc.net/blog/view/57) #[ (혹시 모른) 하나의 string으로 만드는 방법](https://www.acmicpc.net/source/24809285)
