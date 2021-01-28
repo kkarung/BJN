@@ -9,6 +9,6 @@ int main() {
     cin >> s;
     while (i < s.length()) {
         cout << s[i];
-        if (++i%10==0) cout << endl;
+        if (++i%10==0) cout << '\n';
     }
 }
