@@ -16,6 +16,7 @@
 문자열 입력 받고 출력하는데 미숙함<br>
 **getline** 사용법 반드시 숙지하자<br>
 #[ getline](https://kyu9341.github.io/C-C/2020/01/17/C++getline()/) #[ 11718 참고](https://noosphere.tistory.com/5) #[ (혹시 모른) scanf 행으로 입력 받기](https://www.acmicpc.net/source/16084304)<br>
+(첫번째 블로그에서 delimiter 전까지 받는 게 아니라 delimiter는 버리고 그 전까지만 저장한다는 점이 틀림)
 
 #### 11720
 
