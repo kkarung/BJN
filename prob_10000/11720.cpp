@@ -13,3 +13,20 @@ int main() {
     }
     cout << sum;
 }
+
+---------------------------------------------
+// 그냥 한꺼번에 받기
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, sum=0;
+    char num[100];
+    cin >> n;
+    cin >> num;
+    while (n--) {
+        sum += num[n]-'0';
+    }
+    cout << sum;
+}
