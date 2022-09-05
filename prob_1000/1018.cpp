@@ -52,7 +52,7 @@ int countPainted (int y, int x, string input[]) {
     char origin = input[y][x];
     int origin_flag = (x+y==0 ? 0 : (x+y)%2);
     int retn = 0;
-    //cout << origin << "\t" << origin_flag << "\n";
+    
     for (int i=y; i<y+8; i++) {
         for (int j=x; j<x+8; j++){
             if (i==y&&j==x)
