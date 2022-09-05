@@ -21,7 +21,7 @@ int main() {
     cin >> n >> l;
 
     for (int i=0; i<1000; i++)
-        if (i<n) cin >> input[i];
+        cin >> input[i];
 
     sort(input, input+n);
     
