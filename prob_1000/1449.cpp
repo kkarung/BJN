@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <algorithm>
-#define MAXDX 1000;
 using namespace std;
 
 int main() {
@@ -21,10 +20,8 @@ int main() {
 
     cin >> n >> l;
 
-    for (int i=0; i<1000; i++) {
+    for (int i=0; i<1000; i++)
         if (i<n) cin >> input[i];
-        else input[i] = MAXDX;
-    }
 
     sort(input, input+n);
     
