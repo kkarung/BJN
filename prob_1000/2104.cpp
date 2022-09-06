@@ -20,7 +20,7 @@ long long int calArray (int i, int j) {
     int minA = a[mid];
     long long int sum = a[mid], maxA = minA*sum;
 
-    while (j-i >= right-left) { // 배열 횟수만큼 반복함
+    while (j-i >= right-left) { // 배열 개수만큼 반복함
         if (a[left]<=a[right]) {
             sum += a[right]; minA = min(minA, a[right]); right++;
         }
