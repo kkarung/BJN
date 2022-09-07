@@ -35,22 +35,3 @@ int main() {
     }
     cout << list[n];
 }
-
-///// 개선2: Top-down 방식을 쓰자! //////
-// 출처: https://www.acmicpc.net/source/6296573
-
-#include<cstdio>
-#include<algorithm>
-int f(int n) {
-	int a,b;
-	if(n<2) 
-		return 0;
-	a=f(n/2)+n%2+1;
-	b=f(n/3)+n%3+1;
-	return std::min(a,b);
-}
-main(){
-	int n;
-	scanf("%d",&n);
-	printf("%d",f(n));
-}
