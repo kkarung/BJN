@@ -4,7 +4,8 @@
 /////////////////////////
 ///////////////////////// report ///////////////////////////////
 // 2104번과 동일하니 패스
-// 시간 초과 뜸
+// 시간 초과 뜸 (right-left)*minH 부분에서 overflow라는데 아직 잘 모르겠음
+// xxxxxxxxxxxxx
 
 #include <iostream>
 using namespace std;
