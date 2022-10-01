@@ -7,6 +7,7 @@
 // level = 거리
 // 2644 BFS 문제와 거의 동일하되 상하좌우를 체크해 벽을 뚫지 않았는지,
 // maze[][] 값을 체크해 막힌 길은 아닌지 체크해야 하는 과정이 추가되었다.
+// 코드 별로임
 
 #include <iostream>
 #include <utility>
@@ -42,7 +43,7 @@ int main() {
 				int py = curr.first + dy[j];
 				int px = curr.second + dx[j];
 				if (py<0 || py>N-1 || px<0 || px>M-1)
-          continue;
+          				continue;
 				if (maze[py][px] && !visited[py][px]) {
 					visited[py][px] = true;
 					q.push(make_pair(py, px));
