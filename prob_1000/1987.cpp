@@ -18,15 +18,13 @@ bool visited[OOB][OOB] = {false};
 bool isUsed[26] = {false};
 
 void backTracking(int r, int c, int cnt) {
-	M = max(M, cnt+1); // 이제까지의 모든 
-	visited[r][c]=true;
-	visited[r][c]=true;
+	M = max(M, cnt+1); // 최댓값 갱신 (가능하다면)
 	isUsed[board[r][c]-'A']=true;
 	for (int i=0; i<4; i++) {
 		int nr = r+dr[i];
 		int nc = c+dc[i];
 		if (nr<0||nr>=R||nc<0||nc>=C) continue;
-		if (!isUsed[board[nr][nc]-'A'])
+		if (!isUsed[board[nr][nc]-'A']) // 가지 않았던 장소라면
 			backTracking(nr, nc, cnt+1);
 	}
 	isUsed[board[r][c]-'A']=false;
