@@ -1,7 +1,8 @@
 //////////////////////////
 // 2022.10.06 / kkarung //
-//       비트마스크       //
-//       DP + DFS      //
+//        비트마스크       //
+//          DFS         //
+//     DP + Top-Down    //
 //////////////////////////
 ///////////////////////// report ///////////////////////////////
 // 발전소가 켜진 상태를 비트로 표현(i번째 발전소가 켜졌으면 i번째 비트를 1로 두기)
@@ -22,19 +23,19 @@ int DP[1<<MAXN] = {0};
 
 // 이 상태(state)에서 P개 이상의 발전소가 켜지기 위해 드는 최소비용
 // 예를 들면 110에서 111이 되기 위해 드는 최소 비용
-int DFS (int state, int p) {
-	if (p >= P) return 0; // P개 밝혔으면 더 비용 들지 않음
-	if (DP[state]!=VACANT) return DP[state];
+int DFS (int state, int p) { // state: 현재 켜진 발전소를 bit로, p: 현재 켜진 발전소 개수
+	if (p >= P) return 0; // P개 이상 밝혔으면 더 이상 안 켜도 되니까 비용 들지 않음
+	if (DP[state]!=VACANT) return DP[state]; // 이미 찾았으면 다시 안 해도 됨
 	
 	DP[state] = INF;
 	for (int i=0; i<N; i++) {
+		// 출발점이 고장나지 않고 ㄱ
 		if (!(state&(1<<i))) continue;
-		// 출발점이 고장나지 않고
 		for (int j=0; j<N; j++) {
+			// 도착점이 고장나 있을 때만 ㄱ
 			if (state&(1<<j)) continue;
-			// 도착점이 고장나 있을 때만
+			// 계산할 필요성이 있음 ㄱ
 			DP[state] = min(DP[state], pp[i][j]+DFS(state|(1<<j), p+1));
-      // 계산할 필요성 있음
 		}
 	}
 	return DP[state];
@@ -48,12 +49,14 @@ int main() {
 			cin >> pp[i][j];
 	cin >> onOff >> P;
 
-	for (int i=0; i<(1<<MAXN); i++) DP[i] = VACANT; // DP 초기화
+	// DP 초기화
+	for (int i=0; i<(1<<MAXN); i++) DP[i] = VACANT;
 
 	for (int i=0; onOff[i]; i++)
 		if (onOff[i]=='Y') {
-			state |= 1<<i; p++; // 켜진 발전소 업데이트 및 개수 세기
+			// 켜진 발전소 업데이트 및 개수 세기
+			state |= 1<<i; p++;
 		}
 
-	cout << DFS(state, p) << "\n";
+	cout << DFS(state, p);
 }
