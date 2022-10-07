@@ -12,9 +12,9 @@ using namespace std;
 #define MAXN 100001
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
 
 	int N, M;
 	int num[MAXN] = {0};
