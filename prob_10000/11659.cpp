@@ -16,13 +16,12 @@ int main() {
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	int N, M;
-	int num[MAXN] = {0};
+	int N, M, n;
 	int psum[MAXN] = {0};
 	cin >> N >> M;
 	for (int i=0; i<N; i++) {
-		cin >> num[i];
-		psum[i+1] = psum[i]+num[i];
+		cin >> n;
+		psum[i+1] = psum[i]+n;
 	}
 	for (int k=0, i, j; k<M; k++) {
 		cin >> i >> j;
