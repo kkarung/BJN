@@ -4,7 +4,7 @@
 //////////////////////////
 ///////////////////////// report ///////////////////////////////
 // 기본적인 preorder, inorder, postorder 구현 문제
-// children[i][0]은 i번째 알파벳의 왼쪽노드,
+// children[i][0]은 i번째 알파벳의 왼쪽 노드, children[i][1]은 i번째 알파벳의 오른쪽 노드
 
 #include <iostream>
 using namespace std;
