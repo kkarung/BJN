@@ -34,7 +34,6 @@ int main() {
 	cin >> N;
 	
 	for (int i=0; i<N; i++) {
-		char node, lc, rc;
 		cin >> node;
 		cin >> children[node-'A'][0] >> children[node-'A'][1];
 	}
