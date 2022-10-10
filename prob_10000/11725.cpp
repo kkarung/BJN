@@ -22,7 +22,7 @@ int main() {
 	cin >> N;
 	edge.resize(N+1);
 
-	// 한 node에 인접한 node 전부 기록 (DFS, BFS의 인접 행렬)
+	// 한 node에 인접한 node 전부 기록 (BFS의 인접 리스트)
 	// 1 6 이면
 	// edge[1][0 또는 1] = 6 & edge[6][0 또는 1] = 1
 	for (int i=0; i<N-1; i++) {
