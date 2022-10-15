@@ -6,6 +6,7 @@
 // 시간 제한이 1초이므로 시간복잡도에 유의해야 한다.
 // priority queue를 사용하면 삽입, 삭제 모두 O(logn)이고 n번 반복하므로 O(nlogn)이다
 // 최대 N은 10의 6승이므로 시간 조건을 만족한다
+// 1927과 동일
 
 #include <iostream>
 #include <queue>
