@@ -9,6 +9,6 @@ int main() {
 	cin >> N >> s;
   
 	for (int i=0; i<N; i++)
-    sum += s[i]-'0';
+		sum += s[i]-'0';
 	cout << sum << '\n';
 }
