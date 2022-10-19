@@ -8,9 +8,9 @@
 // 계산: i번째까지의 포도주 중 최대로 먹을 수 있는 모든 경우의 수를 비교하자
 // - 경우의 수를 나열해보자
 // i-3 i-2 i-1 i [포도주 번호]
-//  -   o   o  x   DP[i-1]
-//  -   o   x  o   DP[i-2] + wine[i]
-//  o   x   x  x   DP[i-3] + wine[i-1] + wine[i]
+//  -   x   o  o   DP[i-3] + wine[i-1] + wine[i]
+//  -   -   x  o   DP[i-2] + wine[i]
+//  -   -   -  x   DP[i-1]
 
 #include <iostream>
 #define MAX(a, b, c) (((a) > (b)) ? ((a) > (c) ? (a) : (c)) : ((b) > (c) ? (b) : (c)))
@@ -21,9 +21,10 @@ int main() {
     int wine[10001], DP[10001];
     cin >> n;
     for (int i=1; i<=n; i++) cin >> wine[i];
-    DP[0] = 0; DP[1] = wine[1]; DP[2] = wine[1]+wine[2];
-    for (int i=3; i<=n; i++) {
+    
+    DP[0] = 0; DP[1] = wine[1]; DP[2] = MAX(wine[0]+wine[2], wine[1]+wine[2], DP[1]);
+    for (int i=3; i<n; i++) {
         DP[i] = MAX(DP[i-1], DP[i-2]+wine[i], DP[i-3]+wine[i-1]+wine[i]);
     }
-    cout << DP[n] << "\n";
+    cout << DP[n-1] << "\n";
 }
