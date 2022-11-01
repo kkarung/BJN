@@ -21,7 +21,7 @@ int main() {
 	for (int i=0; i<N; i++) {
 		cin >> A[i];
 		for (int j=0; j<i; j++) {
-      // i번째 원소의 부분배열이 될 수 있는 것(A[j]<A[i]) 중에 가장 큰 부분배열(DP[i]<DP[j]) 찾는 과정
+			// i번째 원소의 부분배열이 될 수 있는 것(A[j]<A[i]) 중에 가장 큰 부분배열(DP[i]<DP[j]) 찾는 과정
 			if (A[j] < A[i] && DP[i] < DP[j]) {
 				DP[i] = DP[j];
 			}
